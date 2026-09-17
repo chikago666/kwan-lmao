@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>▶ 10h vào quẩy canto 10 Limbussy — Xem trực tiếp</title>
+<meta name="description" content="Xem trực tiếp full clip 5:22:56 — 10h vào quẩy canto 10 Limbussy (Kênh Kwan) — lưu trữ trên GitHub.">
+<meta property="og:title" content="▶ 10h vào quẩy canto 10 Limbussy (5:22:56)">
+<meta property="og:description" content="Xem trực tiếp full clip trên GitHub Pages">
+<meta property="og:image" content="https://raw.githubusercontent.com/chikago666/kwan-lmao/main/thumbnail-play.jpg">
+<style>
+  :root {
+    --bg: #0b0f14;
+    --bg-card: #10151c;
+    --bg-elev: #161d26;
+    --border: #232b36;
+    --text: #e6edf3;
+    --text-dim: #8b98a5;
+    --accent: #f85149;
+    --accent-hover: #ff6b64;
+    --green: #3fb950;
+    --chip-bg: #1a222c;
+    --chip-active: #3d2422;
+    --chip-active-border: #f85149;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+  }
+  .wrap { width: 100%; max-width: 980px; margin: 0 auto; padding: 16px; flex: 1; }
+
+  header .back {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-dim); text-decoration: none; font-size: 13px;
+    padding: 4px 8px; border-radius: 6px; transition: color .15s;
+  }
+  header .back:hover { color: var(--text); }
+  h1 {
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: 700; margin: 8px 0 4px;
+    letter-spacing: -0.3px;
+  }
+  .meta {
+    color: var(--text-dim); font-size: 13px; margin-bottom: 16px;
+    display: flex; flex-wrap: wrap; gap: 6px 14px;
+  }
+  .meta b { color: var(--text); font-weight: 600; }
+
+  .player-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,.45);
+  }
+  .video-shell { position: relative; background: #000; aspect-ratio: 16/9; }
+  video { width: 100%; height: 100%; display: block; object-fit: contain; }
+
+  .overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 14px; background: rgba(4,8,12,.82); cursor: pointer;
+    transition: opacity .25s;
+  }
+  .overlay.hidden { opacity: 0; pointer-events: none; }
+  .bigplay {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: var(--accent); display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 30px rgba(248,81,73,.45); transition: transform .15s, background .15s;
+  }
+  .overlay:hover .bigplay { transform: scale(1.07); background: var(--accent-hover); }
+  .bigplay svg { width: 38px; height: 38px; fill: #fff; margin-left: 5px; }
+  .overlay .hint { color: #fff; font-size: 14px; font-weight: 600; text-shadow: 0 1px 8px #000; }
+  .overlay .subhint { color: #c9d4de; font-size: 12px; max-width: 460px; text-align: center; }
+
+  .spinner {
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 3px solid rgba(255,255,255,.15); border-top-color: var(--accent);
+    animation: spin 0.9s linear infinite; display: none;
+  }
+  .overlay.loading .spinner { display: block; }
+  .overlay.loading .bigplay { display: none; }
+
+  .banner {
+    display: none; padding: 10px 14px; font-size: 13px;
+    border-top: 1px solid var(--border); align-items: center; gap: 8px;
+  }
+  .banner.show { display: flex; }
+  .banner.error { background: #2d1517; color: #ffb3ae; }
+  .banner.info { background: #12261b; color: #a5e8b8; }
+
+  .statusbar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+    padding: 12px 14px; border-top: 1px solid var(--border);
+    background: var(--bg-elev); font-size: 13px;
+  }
+  .statusbar .seg {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-dim);
+  }
+  .statusbar .seg b { color: var(--text); font-variant-numeric: tabular-nums; }
+  .mode-switch { display: inline-flex; background: var(--chip-bg); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .mode-switch button {
+    background: none; border: none; color: var(--text-dim); font-size: 12px; font-weight: 600;
+    padding: 6px 12px; cursor: pointer; transition: all .15s;
+  }
+  .mode-switch button.active { background: var(--chip-active); color: var(--accent); }
+  .mode-switch button:hover:not(.active) { color: var(--text); }
+
+  .spacer { flex: 1; }
+
+  .parts-strip {
+    padding: 12px 14px; border-top: 1px solid var(--border);
+  }
+  .parts-strip .label { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    background: var(--chip-bg); border: 1px solid var(--border); color: var(--text-dim);
+    border-radius: 999px; padding: 5px 12px; font-size: 12px; cursor: pointer;
+    transition: all .15s; font-variant-numeric: tabular-nums;
+  }
+  .chip:hover { color: var(--text); border-color: #39424e; }
+  .chip.active { background: var(--chip-active); border-color: var(--chip-active-border); color: var(--accent); font-weight: 700; }
+  .chip .tick { color: var(--green); margin-right: 2px; }
+
+  .controls-row { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--chip-bg); border: 1px solid var(--border); color: var(--text);
+    padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: all .15s; text-decoration: none;
+  }
+  .btn:hover { background: var(--bg-elev); border-color: #39424e; }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { background: var(--accent-hover); }
+
+  .resume-tip {
+    margin-top: 14px; padding: 12px 14px; border-radius: 10px;
+    background: #1c242e; border: 1px solid var(--border);
+    display: none; align-items: center; gap: 10px; font-size: 13px; flex-wrap: wrap;
+  }
+  .resume-tip.show { display: flex; }
+
+  .note {
+    margin-top: 16px; font-size: 12.5px; color: var(--text-dim);
+    border-left: 3px solid var(--border); padding-left: 12px;
+  }
+  .note a { color: var(--text); }
+
+  footer {
+    margin-top: 28px; padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--border); text-align: center;
+    color: var(--text-dim); font-size: 12px;
+  }
+  footer a { color: var(--text-dim); }
+  footer a:hover { color: var(--text); }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 10px; }
+    .statusbar { padding: 10px 12px; font-size: 12px; }
+    .controls-row { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="https://github.com/chikago666/kwan-lmao">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M7.78 12.53a.75.75 0 0 1-1.06 0L2.47 8.28a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 1 1 1.06 1.06L4.81 7h7.44a.75.75 0 0 1 0 1.5H4.81l2.97 2.97a.75.75 0 0 1 0 1.06Z"></path></svg>
+      chikago666 / kwan-lmao
+    </a>
+    <h1>🎬 10h vào quẩy canto 10 Limbussy</h1>
+    <div class="meta">
+      <span>Kênh <b>Kwan</b></span>
+      <span>Thời lượng <b>5:22:56</b></span>
+      <span>Chất lượng <b>360p</b> gốc YouTube</span>
+      <span>Livestream <b>17/09/2026</b></span>
+    </div>
+  </header>
+
+  <div class="player-card">
+    <div class="video-shell">
+      <video id="video" preload="metadata" playsinline
+             poster="https://raw.githubusercontent.com/chikago666/kwan-lmao/main/thumbnail-play.jpg"></video>
+      <div class="overlay" id="overlay">
+        <div class="bigplay" aria-label="Bấm để phát video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="hint">Bấm để xem full clip 5:22:56</div>
+        <div class="subhint">Video phát trực tiếp từ GitHub — không cần tải về máy.</div>
+        <div class="spinner"></div>
+      </div>
+    </div>
+
+    <div class="banner" id="banner"></div>
+
+    <div class="statusbar">
+      <div class="mode-switch" role="tablist" aria-label="Chế độ phát">
+        <button id="modeFull" class="active" type="button">Full — 1 file</button>
+        <button id="modeParts" type="button">11 phần</button>
+      </div>
+      <div class="seg"><span id="segPart">Full clip</span></div>
+      <div class="seg">⏱ <b id="segTime">0:00:00</b> / 5:22:56</div>
+      <div class="spacer"></div>
+      <div class="seg" id="segStatus">Sẵn sàng</div>
+    </div>
+
+    <div class="parts-strip" id="partsStrip">
+      <div class="label">CHỌN PHẦN (11 phần — mỗi phần ~30 phút)</div>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <div class="controls-row">
+      <button class="btn primary" id="btnPlay" type="button">▶ Phát</button>
+      <button class="btn" id="btnPrev" type="button">⏮ Phần trước</button>
+      <button class="btn" id="btnNext" type="button">Phần sau ⏭</button>
+      <a class="btn" href="https://github.com/chikago666/kwan-lmao/releases/tag/full-video" target="_blank" rel="noopener">⬇ Tải full (784 MB)</a>
+      <a class="btn" href="https://www.youtube.com/live/Bg6__5awIeE" target="_blank" rel="noopener">▶ Xem bản gốc YouTube</a>
+    </div>
+  </div>
+
+  <div class="resume-tip" id="resumeTip">
+    <span>📍 Bạn đã dừng ở <b id="resumeAt">–</b></span>
+    <button class="btn primary" id="btnResume" type="button">Tiếp tục từ đó</button>
+    <button class="btn" id="btnResumeNo" type="button">Xem từ đầu</button>
+  </div>
+
+  <div class="note">
+    <b>Cách xem:</b> video stream thẳng từ hạ tầng GitHub. Nếu chế độ <b>Full (1 file)</b> không chạy mượt,
+    bấm <b>11 phần</b> — video được chia 11 đoạn nhỏ, phát tự động liền mạch, không giật khi mạng chậm.
+    Vị trí xem được tự ghi nhớ để lần sau tiếp tục. Phím tắt: <b>Space</b> phát/tạm dừng, <b>← →</b> tua 10s, <b>[ ]</b> chuyển phần.
+  </div>
+</div>
+
+<footer>
+  Lưu trữ cá nhân nhằm mục đích lưu trữ — vui lòng tôn trọng bản quyền của kênh <a href="https://www.youtube.com/@kwan" rel="noopener">Kwan</a>.
+  Nguồn: <a href="https://www.youtube.com/live/Bg6__5awIeE" rel="noopener">youtube.com/live/Bg6__5awIeE</a> ·
+  Repo: <a href="https://github.com/chikago666/kwan-lmao" rel="noopener">chikago666/kwan-lmao</a>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ==== Cấu hình nguồn video ====
+  var REPO = 'chikago666/kwan-lmao';
+  var FULL_URL = 'https://github.com/' + REPO + '/releases/download/full-video/full-clip.mp4';
+  var RAW_BASE = 'https://raw.githubusercontent.com/' + REPO + '/main/video/part-';
+  // Điểm bắt đầu (giây) của từng phần trong full clip — tổng 19.376s = 5:22:56
+  var PART_STARTS = [0, 969, 1941, 3879, 5817, 7755, 9693, 11631, 13568, 15506, 17444];
+  var TOTAL = 19376;
+  var PART_COUNT = 11;
+
+  // ==== DOM ====
+  var video = document.getElementById('video');
+  var overlay = document.getElementById('overlay');
+  var banner = document.getElementById('banner');
+  var segPart = document.getElementById('segPart');
+  var segTime = document.getElementById('segTime');
+  var segStatus = document.getElementById('segStatus');
+  var chipsEl = document.getElementById('chips');
+  var modeFullBtn = document.getElementById('modeFull');
+  var modePartsBtn = document.getElementById('modeParts');
+  var partsStrip = document.getElementById('partsStrip');
+  var btnPlay = document.getElementById('btnPlay');
+  var btnPrev = document.getElementById('btnPrev');
+  var btnNext = document.getElementById('btnNext');
+  var resumeTip = document.getElementById('resumeTip');
+  var resumeAt = document.getElementById('resumeAt');
+  var btnResume = document.getElementById('btnResume');
+  var btnResumeNo = document.getElementById('btnResumeNo');
+
+  // ==== Trạng thái ====
+  var mode = 'full';            // 'full' | 'parts'
+  var part = 0;                 // index phần hiện tại (parts mode)
+  var started = false;
+  var saveTimer = null;
+  var LS_KEY = 'kwan-lmao-pos-v1';
+
+  function fmt(s) {
+    s = Math.max(0, Math.floor(s || 0));
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    var hh = h > 0 ? (h < 10 ? '0' + h : h) + ':' : '';
+    var mm = m < 10 ? '0' + m : m, ss = sec < 10 ? '0' + sec : sec;
+    return hh + mm + ':' + ss;
+  }
+  function globalTime() {
+    return mode === 'full' ? video.currentTime : (PART_STARTS[part] + video.currentTime);
+  }
+
+  // ==== Chips 11 phần ====
+  var chipBtns = [];
+  for (var i = 0; i < PART_COUNT; i++) {
+    (function (idx) {
+      var b = document.createElement('button');
+      b.className = 'chip';
+      b.type = 'button';
+      b.innerHTML = '<span class="tick"></span>' + (idx + 1);
+      b.title = 'Phần ' + (idx + 1) + ': ' + fmt(PART_STARTS[idx]) + ' → ' + fmt(idx + 1 < PART_COUNT ? PART_STARTS[idx + 1] : TOTAL);
+      b.setAttribute('aria-label', b.title);
+      b.addEventListener('click', function () { loadPart(idx, true); });
+      chipsEl.appendChild(b);
+      chipBtns.push(b);
+    })(i);
+  }
+  function refreshChips() {
+    chipBtns.forEach(function (b, idx) {
+      b.classList.toggle('active', mode === 'parts' && idx === part);
+    });
+  }
+
+  // ==== Banner / status ====
+  function showBanner(kind, msg) {
+    banner.className = 'banner show ' + kind;
+    banner.textContent = msg;
+  }
+  function hideBanner() { banner.className = 'banner'; }
+  function status(t) { segStatus.textContent = t; }
+
+  // ==== Nguồn video ====
+  function loadFull(autoplay) {
+    mode = 'full';
+    started = true;
+    video.src = FULL_URL;
+    segPart.textContent = 'Full clip';
+    partsStrip.style.display = 'none';
+    modeFullBtn.classList.add('active');
+    modePartsBtn.classList.remove('active');
+    refreshChips();
+    if (autoplay) { playUI(); video.play().catch(function () {}); }
+  }
+  function loadPart(idx, autoplay, timeInPart) {
+    mode = 'parts';
+    part = Math.min(Math.max(idx, 0), PART_COUNT - 1);
+    started = true;
+    video.src = RAW_BASE + (part < 9 ? '0' : '') + (part + 1) + '.mp4';
+    segPart.textContent = 'Phần ' + (part + 1) + '/11 — ' + fmt(PART_STARTS[part]) + ' → ' + fmt(part + 1 < PART_COUNT ? PART_STARTS[part + 1] : TOTAL);
+    partsStrip.style.display = '';
+    modePartsBtn.classList.add('active');
+    modeFullBtn.classList.remove('active');
+    refreshChips();
+    hideBanner();
+    btnPrev.disabled = part === 0;
+    btnNext.disabled = part === PART_COUNT - 1;
+    if (timeInPart) {
+      var apply = function () { video.currentTime = timeInPart; video.removeEventListener('loadedmetadata', apply); };
+      video.addEventListener('loadedmetadata', apply);
+    }
+    if (autoplay) { playUI(); video.load(); video.play().catch(function () {}); }
+  }
+
+  // ==== Overlay / phát ====
+  function playUI() {
+    overlay.classList.add('hidden');
+    btnPlay.textContent = '⏸ Tạm dừng';
+  }
+  function pauseUI() {
+    btnPlay.textContent = '▶ Phát';
+  }
+  overlay.addEventListener('click', function () {
+    if (!started) { loadFull(true); return; }
+    playUI();
+    video.play().catch(function () {});
+  });
+  btnPlay.addEventListener('click', function () {
+    if (!started) { loadFull(true); return; }
+    if (video.paused) { playUI(); video.play().catch(function () {}); }
+    else video.pause();
+  });
+  video.addEventListener('play', playUI);
+  video.addEventListener('pause', function () { pauseUI(); savePos(); });
+  video.addEventListener('waiting', function () { status('Đang tải…'); });
+  video.addEventListener('playing', function () { status('Đang phát'); });
+  video.addEventListener('canplay', function () { status('Sẵn sàng'); });
+
+  // ==== Tự chuyển phần + thời gian ====
+  video.addEventListener('ended', function () {
+    if (mode === 'parts' && part < PART_COUNT - 1) {
+      loadPart(part + 1, true);
+    } else {
+      savePos(0);
+      status('Đã hết video');
+    }
+  });
+  video.addEventListener('timeupdate', function () {
+    segTime.textContent = fmt(globalTime());
+  });
+
+  // ==== Lỗi → tự chuyển sang 11 phần ====
+  video.addEventListener('error', function () {
+    if (!started) return;
+    if (mode === 'full') {
+      showBanner('error', '⚠ Không phát được file full (mạng chậm hoặc file chưa sẵn sàng). Đã tự chuyển sang chế độ 11 phần — phần nhỏ dễ tải hơn.');
+      loadPart(0, true);
+    } else {
+      showBanner('error', '⚠ Phần ' + (part + 1) + ' không tải được. Thử lại hoặc chọn phần khác bên dưới.');
+      status('Lỗi tải phần ' + (part + 1));
+    }
+  });
+
+  // ==== Nút điều hướng ====
+  btnPrev.addEventListener('click', function () { if (part > 0) loadPart(part - 1, !video.paused); });
+  btnNext.addEventListener('click', function () { if (part < PART_COUNT - 1) loadPart(part + 1, !video.paused); });
+  modeFullBtn.addEventListener('click', function () { if (mode !== 'full') { var t = globalTime(); loadFull(true); var ap = function () { video.currentTime = t; video.removeEventListener('loadedmetadata', ap); }; video.addEventListener('loadedmetadata', ap); } });
+  modePartsBtn.addEventListener('click', function () {
+    if (mode !== 'parts') {
+      var t = globalTime();
+      var idx = 0;
+      for (var i = PART_STARTS.length - 1; i >= 0; i--) { if (t >= PART_STARTS[i]) { idx = i; break; } }
+      loadPart(idx, true, t - PART_STARTS[idx]);
+    }
+  });
+
+  // ==== Ghi nhớ vị trí ====
+  function savePos(force) {
+    if (!started) return;
+    var t = globalTime();
+    if (!force && t < 10) return;
+    try {
+      localStorage.setItem(LS_KEY, JSON.stringify({
+        mode: mode, part: part, t: t,
+        playing: !video.paused,
+        ts: Date.now()
+      }));
+    } catch (e) {}
+  }
+  saveTimer = setInterval(savePos, 5000);
+  window.addEventListener('beforeunload', function () { savePos(true); });
+
+  var saved = null;
+  try { saved = JSON.parse(localStorage.getItem(LS_KEY) || 'null'); } catch (e) {}
+  if (saved && saved.t > 30 && saved.t < TOTAL - 60) {
+    resumeAt.textContent = fmt(saved.t) + (saved.mode === 'parts' ? ' (phần ' + (saved.part + 1) + ')' : ' (full)');
+    resumeTip.classList.add('show');
+    btnResume.addEventListener('click', function () {
+      resumeTip.classList.remove('show');
+      if (saved.mode === 'parts') loadPart(saved.part, true, saved.t - PART_STARTS[saved.part]);
+      else { loadFull(true); var ap = function () { video.currentTime = saved.t; video.removeEventListener('loadedmetadata', ap); }; video.addEventListener('loadedmetadata', ap); }
+    });
+    btnResumeNo.addEventListener('click', function () {
+      resumeTip.classList.remove('show');
+      try { localStorage.removeItem(LS_KEY); } catch (e) {}
+      loadFull(true);
+    });
+  }
+
+  // ==== Phím tắt ====
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    switch (e.code) {
+      case 'Space': e.preventDefault(); if (!started) loadFull(true); else if (video.paused) { video.play().catch(function(){}); } else video.pause(); break;
+      case 'ArrowLeft': if (started) video.currentTime = Math.max(0, video.currentTime - 10); break;
+      case 'ArrowRight': if (started) video.currentTime = video.currentTime + 10; break;
+      case 'BracketLeft': if (mode === 'parts' && part > 0) loadPart(part - 1, !video.paused); break;
+      case 'BracketRight': if (mode === 'parts' && part < PART_COUNT - 1) loadPart(part + 1, !video.paused); break;
+    }
+  });
+
+  // ==== Khởi tạo: preload metadata của file full để hiện duration ====
+  video.src = FULL_URL;
+  refreshChips();
+  btnPrev.disabled = true; btnNext.disabled = true;
+})();
+</script>
+</body>
+</html>
