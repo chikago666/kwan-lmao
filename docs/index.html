@@ -325,6 +325,13 @@
     banner.textContent = msg;
   }
   function hideBanner() { banner.className = 'banner'; }
+  function showBannerAfterLoad(kind, msg) {
+    // hiển thị banner SAU khi loadPart (loadPart có hideBanner)
+    setTimeout(function () {
+      banner.className = 'banner show ' + kind;
+      banner.textContent = msg;
+    }, 0);
+  }
   function status(t) { segStatus.textContent = t; }
 
   // ==== Nguồn video ====
@@ -400,8 +407,8 @@
   video.addEventListener('error', function () {
     if (!started) return;
     if (mode === 'full') {
-      showBanner('error', '⚠ Không phát được file full (mạng chậm hoặc file chưa sẵn sàng). Đã tự chuyển sang chế độ 11 phần — phần nhỏ dễ tải hơn.');
       loadPart(0, true);
+      showBannerAfterLoad('error', '⚠ Không phát được file full (mạng chậm hoặc file chưa sẵn sàng). Đã tự chuyển sang chế độ 11 phần — phần nhỏ dễ tải hơn.');
     } else {
       showBanner('error', '⚠ Phần ' + (part + 1) + ' không tải được. Thử lại hoặc chọn phần khác bên dưới.');
       status('Lỗi tải phần ' + (part + 1));
@@ -468,13 +475,21 @@
 
   // ==== Khởi tạo: preload metadata của file full để hiện duration ====
   // Hỗ trợ deep-link: index.html#part=5 → mở thẳng phần 5 (chế độ 11 phần)
-  var hashMatch = /^#part=(\d+)$/.exec(location.hash || '');
-  if (hashMatch) {
-    var idx = Math.min(Math.max(parseInt(hashMatch[1], 10) - 1, 0), PART_COUNT - 1);
-    loadPart(idx, false);
+  function partFromHash() {
+    var m = /^#part=(\d+)$/.exec(location.hash || '');
+    return m ? Math.min(Math.max(parseInt(m[1], 10) - 1, 0), PART_COUNT - 1) : null;
+  }
+  var initPart = partFromHash();
+  if (initPart !== null) {
+    loadPart(initPart, false);
   } else {
     video.src = FULL_URL;
   }
+  // Deep-link khi đang ở trang (thay đổi hash mà không reload)
+  window.addEventListener('hashchange', function () {
+    var p = partFromHash();
+    if (p !== null && (mode !== 'parts' || p !== part)) loadPart(p, !video.paused);
+  });
   refreshChips();
   btnPrev.disabled = !started || part === 0;
   btnNext.disabled = !started || part === PART_COUNT - 1;
