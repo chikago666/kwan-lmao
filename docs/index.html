@@ -467,9 +467,17 @@
   });
 
   // ==== Khởi tạo: preload metadata của file full để hiện duration ====
-  video.src = FULL_URL;
+  // Hỗ trợ deep-link: index.html#part=5 → mở thẳng phần 5 (chế độ 11 phần)
+  var hashMatch = /^#part=(\d+)$/.exec(location.hash || '');
+  if (hashMatch) {
+    var idx = Math.min(Math.max(parseInt(hashMatch[1], 10) - 1, 0), PART_COUNT - 1);
+    loadPart(idx, false);
+  } else {
+    video.src = FULL_URL;
+  }
   refreshChips();
-  btnPrev.disabled = true; btnNext.disabled = true;
+  btnPrev.disabled = !started || part === 0;
+  btnNext.disabled = !started || part === PART_COUNT - 1;
 })();
 </script>
 </body>
