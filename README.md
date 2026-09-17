@@ -1,96 +1,76 @@
 <div align="center">
 
-<img src="thumbnail.jpg" alt="10h vào quẩy canto 10 Limbussy" width="880"/>
-
 # 🎬 10h vào quẩy canto 10 Limbussy
 
-**Kênh:** [Kwan](https://www.youtube.com/@kwan) &nbsp;•&nbsp; **Thời lượng:** 5:22:56 &nbsp;•&nbsp; **Chất lượng:** 360p (gốc YouTube) &nbsp;•&nbsp; **Phát trực tiếp:** 17/09/2026
-
-🎥 **[Xem bản gốc trên YouTube](https://www.youtube.com/live/Bg6__5awIeE)**
+**Kênh [Kwan](https://www.youtube.com/@kwan)** &nbsp;•&nbsp; **5:22:56** &nbsp;•&nbsp; **360p gốc YouTube** &nbsp;•&nbsp; **Livestream 17/09/2026**
 
 </div>
 
 ---
 
-## ▶️ Xem ngay tại đây — không cần tải về
+## ▶️ XEM FULL CLIP NGAY — 1 CÚ NHẤP
 
-Video đã được lưu trữ ngay trong repo này (chia 11 phần, mỗi phần < 100MB).
-**Chỉ cần nhấp vào nút play bên dưới là xem được ngay trên GitHub.** 👇
+[![Xem full clip](thumbnail-play.jpg)](https://github.com/chikago666/kwan-lmao/blob/main/video/full-clip.mp4)
 
-### 🎞️ Phần 1 — `0:00:00 → 0:16:09`
+> 👆 **Bấm vào hình trên** (hoặc [vào đây](https://github.com/chikago666/kwan-lmao/blob/main/video/full-clip.mp4)) để mở **full clip 5:22:56 trong 1 file duy nhất** — GitHub sẽ phát video trực tiếp trên trang, **không cần tải về máy**.
 
-![Phần 1 — 0:00:00 → 0:16:09](video/part-01.mp4)
+<details>
+<summary>📊 Chi tiết file full clip</summary>
 
-### 🎞️ Phần 2 — `0:16:09 → 0:32:21`
+| Thuộc tính | Giá trị |
+|---|---|
+| File | [`video/full-clip.mp4`](/chikago666/kwan-lmao/blob/main/video/full-clip.mp4) |
+| Kích thước | **784 MB** (lưu bằng **Git LFS**) |
+| Thời lượng | 5:22:56 (19.376 giây) |
+| Định dạng | MP4 — H.264 640×360 @30fps + AAC 128kbps (nguyên bản YouTube, không re-encode) |
+| Stream-friendly | ✅ faststart — phát ngay khi đang tải (progressive streaming) |
 
-![Phần 2 — 0:16:09 → 0:32:21](video/part-02.mp4)
+</details>
 
-### 🎞️ Phần 3 — `0:32:21 → 1:04:39`
-
-![Phần 3 — 0:32:21 → 1:04:39](video/part-03.mp4)
-
-### 🎞️ Phần 4 — `1:04:39 → 1:36:57`
-
-![Phần 4 — 1:04:39 → 1:36:57](video/part-04.mp4)
-
-### 🎞️ Phần 5 — `1:36:57 → 2:09:15`
-
-![Phần 5 — 1:36:57 → 2:09:15](video/part-05.mp4)
-
-### 🎞️ Phần 6 — `2:09:15 → 2:41:33`
-
-![Phần 6 — 2:09:15 → 2:41:33](video/part-06.mp4)
-
-### 🎞️ Phần 7 — `2:41:33 → 3:13:51`
-
-![Phần 7 — 2:41:33 → 3:13:51](video/part-07.mp4)
-
-### 🎞️ Phần 8 — `3:13:51 → 3:46:08`
-
-![Phần 8 — 3:13:51 → 3:46:08](video/part-08.mp4)
-
-### 🎞️ Phần 9 — `3:46:08 → 4:18:26`
-
-![Phần 9 — 3:46:08 → 4:18:26](video/part-09.mp4)
-
-### 🎞️ Phần 10 — `4:18:26 → 4:50:44`
-
-![Phần 10 — 4:18:26 → 4:50:44](video/part-10.mp4)
-
-### 🎞️ Phần 11 — `4:50:44 → 5:22:56` (hết)
-
-![Phần 11 — 4:50:44 → 5:22:56](video/part-11.mp4)
+> 💡 **Mẹo:** nếu player không tự chạy trên trang file, bấm **`View raw`** — video sẽ phát trực tiếp bằng trình duyệt (Chrome/Firefox/Safari đều chạy được).
+>
+> ⚠️ File này lưu bằng **Git LFS** (free 1GB/tháng bandwidth) — mỗi lượt xem full tiêu tốn ~784MB bandwidth. Nếu hết quota tháng, hãy dùng tùy chọn xem theo phần bên dưới (không tốn LFS bandwidth).
 
 ---
 
-## 📦 Danh sách file
+## 🎞️ Hoặc xem theo từng phần (không cần LFS)
 
-| # | File | Thời lượng | Kích thước | Bắt đầu từ |
-|---|------|-----------|-----------|------------|
-| 1 | [`video/part-01.mp4`](video/part-01.mp4) | 16:09 | 55 MB | `0:00:00` |
-| 2 | [`video/part-02.mp4`](video/part-02.mp4) | 16:12 | 63 MB | `0:16:09` |
-| 3 | [`video/part-03.mp4`](video/part-03.mp4) | 32:18 | 90 MB | `0:32:21` |
-| 4 | [`video/part-04.mp4`](video/part-04.mp4) | 32:18 | 77 MB | `1:04:39` |
-| 5 | [`video/part-05.mp4`](video/part-05.mp4) | 32:18 | 73 MB | `1:36:57` |
-| 6 | [`video/part-06.mp4`](video/part-06.mp4) | 32:18 | 61 MB | `2:09:15` |
-| 7 | [`video/part-07.mp4`](video/part-07.mp4) | 32:17 | 59 MB | `2:41:33` |
-| 8 | [`video/part-08.mp4`](video/part-08.mp4) | 32:18 | 59 MB | `3:13:51` |
-| 9 | [`video/part-09.mp4`](video/part-09.mp4) | 32:18 | 64 MB | `3:46:08` |
-| 10 | [`video/part-10.mp4`](video/part-10.mp4) | 32:18 | 90 MB | `4:18:26` |
-| 11 | [`video/part-11.mp4`](video/part-11.mp4) | 32:14 | 92 MB | `4:50:44` |
+Video chia 11 phần, mỗi phần < 100MB, **bấm vào là xem trực tiếp trên GitHub**:
 
-> 💡 **Mẹo:** Cần tải cả video về máy? Vào folder [`video/`](video) rồi tải từng file, hoặc dùng `git clone`.
+| Phần | Thời gian | Xem trực tiếp | Kích thước |
+|------|-----------|---------------|------------|
+| 1 | `0:00:00 → 0:16:09` | [▶ part-01.mp4](/chikago666/kwan-lmao/blob/main/video/part-01.mp4) | 55 MB |
+| 2 | `0:16:09 → 0:32:21` | [▶ part-02.mp4](/chikago666/kwan-lmao/blob/main/video/part-02.mp4) | 63 MB |
+| 3 | `0:32:21 → 1:04:39` | [▶ part-03.mp4](/chikago666/kwan-lmao/blob/main/video/part-03.mp4) | 90 MB |
+| 4 | `1:04:39 → 1:36:57` | [▶ part-04.mp4](/chikago666/kwan-lmao/blob/main/video/part-04.mp4) | 77 MB |
+| 5 | `1:36:57 → 2:09:15` | [▶ part-05.mp4](/chikago666/kwan-lmao/blob/main/video/part-05.mp4) | 73 MB |
+| 6 | `2:09:15 → 2:41:33` | [▶ part-06.mp4](/chikago666/kwan-lmao/blob/main/video/part-06.mp4) | 61 MB |
+| 7 | `2:41:33 → 3:13:51` | [▶ part-07.mp4](/chikago666/kwan-lmao/blob/main/video/part-07.mp4) | 59 MB |
+| 8 | `3:13:51 → 3:46:08` | [▶ part-08.mp4](/chikago666/kwan-lmao/blob/main/video/part-08.mp4) | 59 MB |
+| 9 | `3:46:08 → 4:18:26` | [▶ part-09.mp4](/chikago666/kwan-lmao/blob/main/video/part-09.mp4) | 64 MB |
+| 10 | `4:18:26 → 4:50:44` | [▶ part-10.mp4](/chikago666/kwan-lmao/blob/main/video/part-10.mp4) | 90 MB |
+| 11 | `4:50:44 → 5:22:56` | [▶ part-11.mp4](/chikago666/kwan-lmao/blob/main/video/part-11.mp4) | 92 MB |
+
+---
+
+## 📥 Tải về máy
+
+```bash
+# Cả repo (nhớ cài git-lfs: https://git-lfs.com)
+git lfs install
+git clone https://github.com/chikago666/kwan-lmao.git
+
+# Hoặc tải từng file trong thư mục video/ trực tiếp trên web
+```
 
 ---
 
 ## ℹ️ Thông tin video
 
 - **Tiêu đề:** 10h vào quẩy canto 10 Limbussy
-- **Kênh:** [Kwan](https://www.youtube.com/@kwan) — 65.5K subscribers
-- **Fanpage:** [facebook.com/justkwanthings](https://www.facebook.com/justkwanthings)
+- **Kênh:** [Kwan](https://www.youtube.com/@kwan) — 65.5K subscribers • [Fanpage](https://www.facebook.com/justkwanthings)
 - **Thể loại:** Gaming
 - **Lượt xem lúc lưu trữ:** ~18.551
 - **Nguồn gốc:** [youtube.com/live/Bg6__5awIeE](https://www.youtube.com/live/Bg6__5awIeE)
-- **Định dạng lưu trữ:** MP4 (H.264 640×360 @30fps + AAC 128kbps) — nguyên bản từ YouTube, không re-encode
 
 > ⚠️ Video được lưu trữ nhằm mục đích cá nhân / lưu trữ. Vui lòng tôn trọng bản quyền của kênh **Kwan**. Muốn xem chất lượng cao nhất, hãy truy cập [bản gốc trên YouTube](https://www.youtube.com/live/Bg6__5awIeE).
